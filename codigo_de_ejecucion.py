@@ -17,34 +17,6 @@ from sklearn.compose import make_column_transformer
 from sklearn.pipeline import make_pipeline
 
 
-#2.CARGA DATOS
-ruta_proyecto = 'C:/Users/dartu/OneDrive/Documentos/Boston University/DATA SCIENCE FOR BUSINESS/03_MACHINE_LEARNING/06_CASOS/03_RIESGOS'
-nombre_fichero_datos = 'validacion.csv'
-ruta_completa = ruta_proyecto + '/02_Datos/02_Validacion/' + nombre_fichero_datos
-df = pd.read_csv(ruta_completa,index_col='id_cliente').drop(columns='Unnamed: 0')
-
-
-#3.VARIABLES Y REGISTROS FINALES
-variables_finales = ['ingresos_verificados',
-                     'vivienda',
-                     'finalidad',
-                     'num_cuotas',
-                     'antigüedad_empleo',
-                     'rating',
-                     'ingresos',
-                     'dti',
-                     'num_lineas_credito',
-                     'porc_uso_revolving',
-                     'principal',
-                     'tipo_interes',
-                     'imp_cuota',
-                     'num_derogatorios'
-                  ]
-a_eliminar = df.loc[df.ingresos > 300000].index.values
-df = df[~df.index.isin(a_eliminar)]
-df = df[variables_finales]
-
-
 #4.FUNCIONES DE SOPORTE
 def calidad_datos(temp):
     temp['antigüedad_empleo'] = temp['antigüedad_empleo'].fillna('desconocido')
