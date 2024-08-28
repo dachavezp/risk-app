@@ -18,7 +18,7 @@ from sklearn.pipeline import make_pipeline
 
 
 #2.CARGA DATOS
-ruta_proyecto = 'C:/Users/isaac/Google Drive/DS4B/CursoMachineLearningPython/03_MACHINE_LEARNING/08_CASOS/03_RIESGOS'
+ruta_proyecto = 'C:/Users/dartu/OneDrive/Documentos/Boston University/DATA SCIENCE FOR BUSINESS/03_MACHINE_LEARNING/06_CASOS/03_RIESGOS'
 nombre_fichero_datos = 'validacion.csv'
 ruta_completa = ruta_proyecto + '/02_Datos/02_Validacion/' + nombre_fichero_datos
 df = pd.read_csv(ruta_completa,index_col='id_cliente').drop(columns='Unnamed: 0')
