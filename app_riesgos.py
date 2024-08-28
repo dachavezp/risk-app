@@ -10,7 +10,7 @@ st.set_page_config(
 
 #SIDEBAR
 with st.sidebar:
-    st.image('risk_score.jpg')
+    st.image('BU.jpg')
 
     #INPUTS DE LA APLICACION
     principal = st.number_input('Amount to lend', 500, 50000)
@@ -34,7 +34,7 @@ with st.sidebar:
 
 
 #MAIN
-st.title('Arturo Chavez RISK SCORE ANALYZER')
+st.title('ARTURO RISK SCORE ANALYZER')
 
 
 #CALCULAR
@@ -145,4 +145,4 @@ if st.sidebar.button('CALCULATE RISK'):
         st.metric(label="COMISIÓN A APLICAR", value = kpi_el * 3) #Metido en estático por simplicidad
 
 else:
-    st.write('DEFINE LOS PARÁMETROS DEL PRÉSTAMO Y HAZ CLICK EN CALCULAR RIESGO')
+    st.write('DEFINE PARAMETERS OF LEND AND DO A CLICK ON CALCULATE RISK')
